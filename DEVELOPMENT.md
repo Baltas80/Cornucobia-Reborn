@@ -15,10 +15,11 @@
 3. Enabled ARMv7 and ARM64 in the combined Android export preset.
 4. Capped the final frame of player lane movement to prevent overshooting the target lane.
 5. Clarified in the README that this is a fork and retained the original license and credit information.
+6. Added original SVG branding for the app icon, Android adaptive icon layers and main-menu title; wired these assets into the project and Android export presets.
 
 ## Release blockers to resolve before publishing
 
-- **Branding:** the copyrighted Egothystical logo and its import metadata have been removed from the fork, along with the menu references. The original Cornucobia title artwork remains for now, with its attribution retained. A distinct title/icon/art direction is still required before release.
+- **Branding:** the copyrighted Egothystical logo and its import metadata have been removed from the fork, along with the menu references. The main menu now uses a newly created SVG title mark and the Android launcher presets use newly created SVG icon layers. The SVG assets and their appearance still require visual verification in Godot on-device before release.
 - **Export verification:** export presets have been edited but no APK/AAB has yet been built or run. Verify with the actual Godot 4.3 installation and installed Android export templates.
 - **Google Play package:** prepare and test an Android App Bundle (AAB), not only an APK, and set a release version code that increases for each upload. The three presets now use version code 2, App Bundle export format, and target SDK 36. Verify the export with Godot 4.3 and its installed Android export templates; a configuration value alone does not prove that the resulting bundle meets Play's requirements.
 - **Signing:** configure a release keystore securely on the build machine. Do not commit keystores, passwords, or signing secrets.
@@ -30,5 +31,6 @@
 
 1. Open and run the project in Godot 4.3; resolve parse errors and runtime errors first.
 2. Test lane switching, collision/damage, score persistence, pause/back behavior, loading transitions and leaderboard fallback.
-3. Replace the proprietary logo and update the main-menu identity.
+3. Verify the new SVG assets import correctly in Godot 4.3 and render correctly in the Android build.
+3. Verify the new title logo and launcher icon render correctly at mobile sizes; refine spacing and produce Play Store screenshots.
 4. Prepare a reproducible Android AAB export and test on a physical Android device.
