@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="300" viewBox="0 0 1100 300">
+<defs><linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff09a"/><stop offset=".45" stop-color="#ffc642"/><stop offset="1" stop-color="#db7626"/></linearGradient></defs>
+<g stroke="#47291d" stroke-width="18" stroke-linejoin="round">
+ <path d="M92 113 Q65 63 133 58 Q180 12 235 55 Q279 14 328 55 Q370 21 419 63 L469 106 L442 139 L105 145Z" fill="#3f7d45"/>
+ <path d="M684 109 Q725 57 774 61 Q821 18 864 58 Q916 27 955 68 Q1017 52 1027 113 L1000 145 L686 145Z" fill="#3f7d45"/>
+ <text x="550" y="143" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-weight="900" font-size="105" fill="url(#gold)" paint-order="stroke">CORNUCOBIA</text>
+ <path d="M254 168 Q550 204 846 168 L820 263 Q550 292 280 263Z" fill="#f3b849"/>
+ <text x="550" y="248" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-weight="900" font-size="77" fill="#fff7df" paint-order="stroke">REBORN</text>
+</g>
+<g fill="#f8dc70" stroke="#754527" stroke-width="5"><path d="M102 174 Q64 151 66 124 Q105 134 122 164Z"/><path d="M998 174 Q1036 151 1034 124 Q995 134 978 164Z"/></g>
+</svg>
