@@ -60,10 +60,6 @@ func _on_transition_timer_timeout() -> void:
 	"offset:y",
 	0,
 	3.0).from_current().set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
-	tween.parallel().tween_property(%EgothysticalLogo,
-	"position:y",
-	-500,
-	2.0).as_relative().set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT).set_delay(0.5)
 	tween.parallel().tween_property($CornucobiaLogo,
 	"position:y",
 	logo_original_y,
@@ -71,7 +67,6 @@ func _on_transition_timer_timeout() -> void:
 	tween.tween_callback(_after_transition)
 
 func _after_transition():
-	%EgothysticalLogo.queue_free()
 	%SkyBlueOnly.queue_free()
 	$SkyBlueOnlyCover.queue_free()
 	%SkipLabel.queue_free()
