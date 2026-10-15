@@ -1,4 +1,7 @@
 # Cornucobia Reborn
+
+This fork adds an original Pagrey icon, adaptive Android launcher artwork and a new Cornucobia Reborn title mark in SVG format. These assets were created for this fork and replace the upstream title mark in the main menu. The application ID is `com.pagrey.cornucobiareborn`.
+
 A mobile (Android) game where the player controls Cobia, a living scarecrow, as they run across the farm, fending off varmints and collecting corn kernels. Made with Godot 4.3.
 
 This repository is a separate development fork of [etherealxx/cornucobia](https://github.com/etherealxx/cornucobia). The original repository is not modified by this fork. Original code, asset and addon credits and their respective licenses are retained below; the fork does not imply affiliation with the original creator.
