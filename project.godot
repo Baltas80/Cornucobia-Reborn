@@ -19,10 +19,10 @@ config/quit_on_go_back=false
 config/features=PackedStringArray("4.3", "GL Compatibility")
 run/max_fps=60
 boot_splash/show_image=false
-boot_splash/image="res://icons/cornucobia_foreground.png"
+boot_splash/image="res://icons/pagrey_cornucobia_foreground.svg"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
-config/icon="res://icons/cornucobia_icon.png"
+config/icon="res://icons/pagrey_cornucobia_icon.svg"
 
 [autoload]
 
