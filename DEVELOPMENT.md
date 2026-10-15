@@ -20,7 +20,7 @@
 
 - **Branding:** the copyrighted Egothystical logo and its import metadata have been removed from the fork, along with the menu references. The original Cornucobia title artwork remains for now, with its attribution retained. A distinct title/icon/art direction is still required before release.
 - **Export verification:** export presets have been edited but no APK/AAB has yet been built or run. Verify with the actual Godot 4.3 installation and installed Android export templates.
-- **Google Play package:** prepare and test an Android App Bundle (AAB), not only an APK, and set a release version code that increases for each upload. The three presets now use version code 2 and App Bundle export format; verify this with the installed Godot Android export templates.
+- **Google Play package:** prepare and test an Android App Bundle (AAB), not only an APK, and set a release version code that increases for each upload. The three presets now use version code 2, App Bundle export format, and target SDK 36. Verify the export with Godot 4.3 and its installed Android export templates; a configuration value alone does not prove that the resulting bundle meets Play's requirements.
 - **Signing:** configure a release keystore securely on the build machine. Do not commit keystores, passwords, or signing secrets.
 - **Online leaderboard:** the repository does not contain secrets/api_keys/silentwolf_api_key.gd; leaderboard configuration therefore appears disabled unless a valid key file is supplied privately.
 - **Privacy and terms:** review the existing terms/privacy screen, publish an accurate privacy policy, and verify all disclosures against the final build and any third-party services.
