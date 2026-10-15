@@ -6,6 +6,10 @@ var is_loading_leaderboard = false
 @export var main_menu_scene : NextSceneRes
 @export var debug_accept_windows := false
 
+func _debug_windows_enabled() -> bool:
+# SECURITY: debug bypasses only work in debug builds, never in release.
+return debug_accept_windows and OS.is_debug_build()
+
 func _ready() -> void:
 	GlobalAudioPlayer.music_volume(0.0)
 	is_loading_leaderboard = true
@@ -28,7 +32,7 @@ func playclick():
 func _on_btn_submit_score_precise_released() -> void:
 	%Notice.hide()
 	if not is_loading_leaderboard:
-		if GlobalVar.silentwolf_configured or debug_accept_windows:
+		if GlobalVar.silentwolf_configured or _debug_windows_enabled():
 			playclick()
 			is_loading_leaderboard = true
 			if not GlobalVar.is_tos_accepted:
@@ -83,7 +87,7 @@ func _on_insert_name_confirmed() -> void:
 	SaveSystem.save()
 	print("PLAYER NAME: %s" % GlobalVar.playername)
 	toggle_modulator()
-	if not debug_accept_windows:
+	if not _debug_windows_enabled():
 		%ScoreNames.text = "(please wait)"
 		%NameScores.text = "~\nw\na\ni\nt\n~"
 		await SilentWolf.Scores.save_score(GlobalVar.playername, %ScoreBoard.finalscore)

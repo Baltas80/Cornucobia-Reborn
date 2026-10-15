@@ -8,20 +8,23 @@ const SWLogger = preload("res://addons/silent_wolf/utils/SWLogger.gd")
 # store lookup (not logged in player name) and validator in local file
 static func save_data(path: String, data: Dictionary, debug_message: String='Saving data to file in local storage: ') -> bool:
 	var save_success = false
+	# SECURITY: serialize as JSON (matches get_data) and never log the raw
+	# contents — this file holds session credentials (lookup/validator).
 	var file = FileAccess.open(path, FileAccess.WRITE)
-	file.store_string(str(data))
+	if file == null:
+		SWLogger.error("Failed to open file for writing: " + str(path))
+		return false
+	file.store_string(JSON.stringify(data))
 	save_success = true
-	SWLogger.debug(debug_message + str(data))
+	SWLogger.debug(debug_message + "[redacted]")
 	return save_success
 
 
 static func remove_data(path: String, debug_message: String='Removing data from file in local storage: ') -> bool:
 	var delete_success = false
 	if FileAccess.file_exists(path):
-		var file = FileAccess.open(path, FileAccess.WRITE)
-		var data = {}
-		file.store_var(data)
-		delete_success = true
+		DirAccess.remove_absolute(path)
+		delete_success = not FileAccess.file_exists(path)
 	SWLogger.debug(debug_message)
 	return delete_success
 

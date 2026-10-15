@@ -123,7 +123,7 @@ func get_scores(maximum: int=10, ldboard_name: String="main", period_offset: int
 	SWLogger.info("Calling SilentWolf backend to get scores...")
 	# resetting the latest_number value in case the first requests times out, we need to request the same amount of top scores in the retry
 	latest_max = maximum
-	var request_url = "https://api.silentwolf.com/get_scores/" + str(SilentWolf.config.game_id) + "?max=" + str(maximum)  + "&ldboard_name=" + str(ldboard_name) + "&period_offset=" + str(period_offset)
+	var request_url = "https://api.silentwolf.com/get_scores/" + str(SilentWolf.config.game_id.uri_encode()) + "?max=" + str(maximum)  + "&ldboard_name=" + str(ldboard_name.uri_encode()) + "&period_offset=" + str(period_offset)
 	SilentWolf.send_get_request(GetScores, request_url)
 	return self
 
@@ -283,7 +283,7 @@ func get_scores_around(score, scores_to_fetch=3, ldboard_name: String="main") ->
 	SWLogger.info("Calling SilentWolf backend to scores above and below a certain score...")
 	# resetting the latest_number value in case the first requests times out, we need to request the same amount of top scores in the retry
 	#latest_max = maximum
-	var request_url = "https://api.silentwolf.com/get_scores_around/" + str(SilentWolf.config.game_id) + "?scores_to_fetch=" + str(scores_to_fetch)  + "&ldboard_name=" + str(ldboard_name) + "&score_id=" + str(score_id) + "&score_value=" + str(score_value)
+	var request_url = "https://api.silentwolf.com/get_scores_around/" + str(SilentWolf.config.game_id.uri_encode()) + "?scores_to_fetch=" + str(scores_to_fetch)  + "&ldboard_name=" + str(ldboard_name.uri_encode()) + "&score_id=" + str(str(score_id).uri_encode()) + "&score_value=" + str(str(score_value).uri_encode())
 	SilentWolf.send_get_request(ScoresAround, request_url)
 	return self
 
@@ -314,7 +314,7 @@ func delete_score(score_id: String, ldboard_name: String='main') -> Node:
 	wrDeleteScore = prepared_http_req.weakref
 	DeleteScore.request_completed.connect(_on_DeleteScore_request_completed)
 	SWLogger.info("Calling SilentWolf to delete a score")
-	var request_url = "https://api.silentwolf.com/delete_score?game_id=" + str(SilentWolf.config.game_id) + "&ldboard_name=" + str(ldboard_name) + "&score_id=" + str(score_id)
+	var request_url = "https://api.silentwolf.com/delete_score?game_id=" + str(SilentWolf.config.game_id.uri_encode()) + "&ldboard_name=" + str(ldboard_name.uri_encode()) + "&score_id=" + str(str(score_id).uri_encode())
 	SilentWolf.send_get_request(DeleteScore, request_url)
 	return self
 

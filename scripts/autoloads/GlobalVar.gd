@@ -7,12 +7,24 @@ var cornkernel_score := 0
 var silentwolf_api_key_path = "res://secrets/api_keys/silentwolf_api_key.gd" # "res://secrets/silentwolf_api_key.gd"
 var silentwolf_configured := false
 var is_tos_accepted := false
-var playername := ""
+var playername := "":
+	set(value):
+		# SECURITY: sanitize the name before it reaches URLs and payloads.
+		playername = _sanitize_player_name(str(value))
 var silentwolf_open_scene_on_close = "res://scenes/menus_and_levels/main_gameplay_scene.tscn"
 var firstload := true
 var next_scene_path :=""
 var loadingscene_path = "res://scenes/menus_and_levels/loading_screen.tscn"
 var debuglog := ""
+
+func _sanitize_player_name(value: String) -> String:
+	# SECURITY: strip control characters and URL/query-breaking characters,
+	# and cap the length to avoid abuse.
+	var re_clean := RegEx.create_from_string("[\\x00-\\x1f\\x7f?&#=\"']")
+	var out: String = re_clean.sub(value, "", true)
+	if out.length() > 32:
+		out = out.substr(0, 32)
+	return out.strip_edges()
 var mainmenu_logo_transition := true
 var music_path_to_load := ""
 
