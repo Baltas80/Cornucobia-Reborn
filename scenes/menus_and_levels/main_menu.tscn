@@ -8,7 +8,7 @@
 [ext_resource type="Theme" uid="uid://cc4xqkjslk0ic" path="res://resources/monogram_ui_theme.tres" id="2_ielbd"]
 [ext_resource type="Texture2D" uid="uid://xys5c8adk4eb" path="res://assets/gamesprites/background/summer_grass.png" id="3_ivpr7"]
 [ext_resource type="Texture2D" uid="uid://be1may06aqfs2" path="res://assets/gamesprites/background/summer_sky_cloud.png" id="3_s03cx"]
-[ext_resource type="Texture2D" uid="uid://b6wcvplbjwp38" path="res://assets/ui/logo/cornucobia_logo.png" id="8_7d7lc"]
+[ext_resource type="Texture2D" path="res://assets/ui/logo/cornucobia_reborn_logo.svg" id="8_7d7lc"]
 [ext_resource type="PackedScene" uid="uid://dqmx8d6kghpgq" path="res://scenes/modular_touch_button.tscn" id="9_g7jex"]
 [ext_resource type="Shader" path="res://shaders/change2color.gdshader" id="10_2b4u4"]
 [ext_resource type="FontFile" uid="uid://mop3gahfptvb" path="res://fonts/monogram-extended.ttf" id="11_m4xg1"]
