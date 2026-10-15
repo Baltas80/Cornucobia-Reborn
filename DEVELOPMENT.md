@@ -18,7 +18,7 @@
 
 ## Release blockers to resolve before publishing
 
-- **Branding:** the original main menu still references the Egothystical logo. The upstream README explicitly says this logo is copyrighted and excluded from the project license. Replace it with original artwork or obtain explicit permission before distributing a build.
+- **Branding:** the copyrighted Egothystical logo and its import metadata have been removed from the fork, along with the menu references. The Cornucobia title artwork remains and is covered by the original README's CC BY 4.0 visual-art attribution, which must be retained.
 - **Export verification:** export presets have been edited but no APK/AAB has yet been built or run. Verify with the actual Godot 4.3 installation and installed Android export templates.
 - **Google Play package:** prepare and test an Android App Bundle (AAB), not only an APK, and set a release version code that increases for each upload.
 - **Signing:** configure a release keystore securely on the build machine. Do not commit keystores, passwords, or signing secrets.
