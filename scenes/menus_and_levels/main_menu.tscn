@@ -192,7 +192,7 @@ one_shot = true
 
 [node name="CornucobiaLogo" type="Sprite2D" parent="."]
 position = Vector2(545, 630)
-scale = Vector2(3.82, 3.82)
+scale = Vector2(0.52, 0.52)
 texture = ExtResource("8_7d7lc")
 
 [node name="BtnPlay" parent="." instance=ExtResource("9_g7jex")]
