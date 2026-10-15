@@ -62,7 +62,7 @@ External (free) arts used in this game, with their licenses, are:
   - Quote from the asset's site:
   - > free to use for any purpose . Credit me if you like [ it's optional ] , Thanks .
 
-Egothystical logo—located at [assets/ui/logo/egothystical_logo.png](https://github.com/etherealxx/seedrunner-repo/blob/main/assets/ui/logo/egothystical_logo.png)—is a **copyrighted** work and is **not** covered by this project's license. All rights to the logo are reserved by the project owner.
+The original upstream project included an Egothystical logo (see the [upstream asset](https://github.com/etherealxx/cornucobia)); it is a **copyrighted** work and is **not** covered by this project's license. That logo and its import metadata have therefore been excluded from this fork. All rights to the original logo remain with its owner.
 
 #### Musics
 
