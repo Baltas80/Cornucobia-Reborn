@@ -10,11 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Cornucobia"
-config/version="0.1.1"
+config/name="Cornucobia Reborn"
+config/version="0.2.0"
 run/main_scene="res://scenes/menus_and_levels/loading_screen.tscn"
 config/use_custom_user_dir=true
-config/custom_user_dir_name="Cornucobia"
+config/custom_user_dir_name="CornucobiaReborn"
 config/quit_on_go_back=false
 config/features=PackedStringArray("4.3", "GL Compatibility")
 run/max_fps=60
