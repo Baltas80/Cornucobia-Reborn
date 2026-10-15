@@ -73,13 +73,18 @@ func _physics_process(delta: float) -> void:
 				velocity += get_gravity() * delta * gravity_speed_multiplier
 
 		else: # switching lane process
-			if (self.position.y > switch_lane_target_y and posneg == -1) or (
-				self.position.y < switch_lane_target_y and posneg == 1):
-				velocity.y = SPEED * switch_lane_speed_multiplier * posneg
+			var remaining_y: float = switch_lane_target_y - position.y
+			var max_lane_speed: float = SPEED * switch_lane_speed_multiplier
+			if absf(remaining_y) > 0.5:
+				# Cap the last frame's movement to the remaining distance so the
+				# character cannot overshoot the target lane.
+				velocity.y = signf(remaining_y) * minf(max_lane_speed, absf(remaining_y) / delta)
 			else:
+				position.y = switch_lane_target_y
+				velocity.y = 0.0
 				switching_lane = false
 				collision.disabled = false
-				switch_lane_target_y = 0
+				switch_lane_target_y = 0.0
 
 		var d : int = 1 if (current_direction == "right") else -1 # "left"
 		#if sprite.get_animation() != "idle":
