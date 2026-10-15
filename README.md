@@ -8,8 +8,8 @@ This game is open source.
 ## Licenses & Credits
 ### This Project
 All pieces of code `(*.gd)`, scenes `(*.tscn)`, and resources `(*.tres)` in this project,<br/>
-**except** for those located in the [addons/](https://github.com/etherealxx/seedrunner-repo/blob/main/addons) and [shaders/](https://github.com/etherealxx/seedrunner-repo/blob/main/shaders) directories and their subdirectories,<br/>
-are licensed under the [Apache License 2.0](https://github.com/etherealxx/seedrunner-repo/blob/main/LICENSE).
+**except** for those located in the [addons/](https://github.com/etherealxx/cornucobia/blob/main/addons) and [shaders/](https://github.com/etherealxx/cornucobia/blob/main/shaders) directories and their subdirectories,<br/>
+are licensed under the [Apache License 2.0](https://github.com/etherealxx/cornucobia/blob/main/LICENSE).
 
 ### Game Engine (Godot)
 
@@ -20,7 +20,7 @@ Quoting from the website:
 
 ### Godot Addons
 
-This project uses several Godot addons, located in the [addons/](https://github.com/etherealxx/seedrunner-repo/blob/main/addons) folder.
+This project uses several Godot addons, located in the [addons/](https://github.com/etherealxx/cornucobia/blob/main/addons) folder.
 
 #### Runtime Addons
 These addons are embedded within the exported game to do/manage certain feature of the game. These addons are credited in the game credits screen.
@@ -66,25 +66,25 @@ The original upstream project included an Egothystical logo (see the [upstream a
 
 #### Musics
 
-External (free) musics used in this game—located in [assets/musics/](https://github.com/etherealxx/seedrunner-repo/blob/main/assets/musics)—with their licenses, are:
+External (free) musics used in this game—located in [assets/musics/](https://github.com/etherealxx/cornucobia/blob/main/assets/musics)—with their licenses, are:
 
 - **Farm** Kevin MacLeod (incompetech.com); Licensed under [Creative Commons: By Attribution 3.0 License](http://creativecommons.org/licenses/by/3.0/) ([site](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1800016))
 - **Upbeat Forever** Kevin MacLeod (incompetech.com); Licensed under [Creative Commons: By Attribution 3.0 License](http://creativecommons.org/licenses/by/3.0/) ([site](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500063))
 
 #### Sound effects
 
-Sound effects used in this game—located in [assets/sound_effects/](https://github.com/etherealxx/seedrunner-repo/blob/main/assets/sound_effects)—are made by our programmer using [Chiptone](https://sfbgames.itch.io/chiptone), and (the sound effects) are licensed under the [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) license.
+Sound effects used in this game—located in [assets/sound_effects/](https://github.com/etherealxx/cornucobia/blob/main/assets/sound_effects)—are made by our programmer using [Chiptone](https://sfbgames.itch.io/chiptone), and (the sound effects) are licensed under the [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) license.
 
 ### Fonts
 
-Fonts used in this game—located in [fonts/](https://github.com/etherealxx/seedrunner-repo/blob/main/fonts)—with their licenses, are:
+Fonts used in this game—located in [fonts/](https://github.com/etherealxx/cornucobia/blob/main/fonts)—with their licenses, are:
 
 - [monogram](https://datagoblin.itch.io/monogram), CC0
 - [Roboto Flex](https://github.com/googlefonts/roboto-flex), licensed under the [SIL Open Font License, Version 1.1](http://scripts.sil.org/OFL) (OFL)
 
 ### Misc.
 #### Godot Shader (gdshader)
-Shaders used in this game—located in [shaders/](https://github.com/etherealxx/seedrunner-repo/blob/main/shaders)—with their licenses, are:
+Shaders used in this game—located in [shaders/](https://github.com/etherealxx/cornucobia/blob/main/shaders)—with their licenses, are:
 
 - [windsway](https://godotshaders.com/shader/2d-wind-sway/), MIT
 - [hitflash](https://godotshaders.com/shader/hit-flash-effect/), CC0
