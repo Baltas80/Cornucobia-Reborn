@@ -213,7 +213,8 @@ func login_player(username: String, password: String, remember_me:bool=false) ->
 		payload["remember_me_expires_in"] = str(SilentWolf.auth_config.saved_session_expiration_days)
 	var payload_for_logging = payload
 	var obfuscated_password = SWUtils.obfuscate_string(payload["password"])
-	print("obfuscated password: " + str(obfuscated_password))
+	if OS.is_debug_build():
+		print("obfuscated password: " + str(obfuscated_password))
 	payload_for_logging["password"] = obfuscated_password
 	SWLogger.debug("SilentWolf login player payload: " + str(payload_for_logging))
 	var request_url = "https://api.silentwolf.com/login_player"
@@ -455,5 +456,5 @@ func load_session() -> Dictionary:
 	sw_session_data = SWLocalFileStorage.get_data(path)
 	if sw_session_data == null:
 		SWLogger.debug("No local SilentWolf session stored, or session data stored in incorrect format")
-	SWLogger.info("Found session data: " + str(sw_session_data))
+	SWLogger.info("Found session data for: " + str(sw_session_data.get("lookup", "<unknown>")))
 	return sw_session_data

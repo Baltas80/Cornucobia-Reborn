@@ -211,9 +211,19 @@ func save(file_path : String = default_file_path, enc_file_path := encrypted_fil
 				push_error("method get_encryption_key not found")
 			file = FileAccess.open_encrypted_with_pass(enc_file_path, FileAccess.WRITE, encryption_key)
 		else:
-			file = FileAccess.open(file_path, FileAccess.WRITE)
+			# SECURITY: don't silently write unencrypted saves in release builds.
+			if OS.is_debug_build():
+				push_warning("SaveSystem: encryption key missing, saving UNENCRYPTED (debug build only).")
+				file = FileAccess.open(file_path, FileAccess.WRITE)
+			else:
+				push_error("SaveSystem: encryption key missing, refusing to save in release build.")
+				return
 	else:
 		file = FileAccess.open(file_path, FileAccess.WRITE)
+
+	if file == null:
+		push_error("SaveSystem: could not open save file for writing.")
+		return
 	
 	# We need to call typecasting when saving too, so that Resources that
 	# weren't manually added with set_var but are parts of an object that
